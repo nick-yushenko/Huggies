@@ -116,11 +116,15 @@ function setBoostSlider() {
       768: {
         slidesPerView: 3,
         freeMode: false,
+        centeredSlides: false,
+
 
       },
       425: {
         slidesPerView: 1,
         spaceBetween: 20,
+        centeredSlides: false,
+
 
       },
 
@@ -130,7 +134,7 @@ function setBoostSlider() {
 
   })
 
-  if (window.innerWidth > 768 || window.innerWidth <= 425 )
+  if (window.innerWidth > 768 || window.innerWidth <= 425)
     boostSlider.slideTo(1)
 
   const boostSlides = document.querySelectorAll('.boost-slide')
