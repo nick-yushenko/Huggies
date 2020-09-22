@@ -64,36 +64,38 @@ if (thanksModal && closeThanks)
   })
 
 //  Слайдеры
+if (document.querySelector('.program-slider')) {
 
-var programSlider = new Swiper('.program-slider', {
-  // Optional parameters
-  direction: 'horizontal',
-  speed: 500,
-  spaceBetween: 50,
+  var programSlider = new Swiper('.program-slider', {
+    // Optional parameters
+    direction: 'horizontal',
+    speed: 500,
+    spaceBetween: 50,
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.program-slider__next',
-    prevEl: '.program-slider__prev',
-  },
+    // Navigation arrows
+    navigation: {
+      nextEl: '.program-slider__next',
+      prevEl: '.program-slider__prev',
+    },
 
 
-})
-const programSlides = document.querySelectorAll('.program-slide')
-const programPrev = document.querySelector('.program-slider__prev')
-const programNext = document.querySelector('.program-slider__next')
+  })
+  const programSlides = document.querySelectorAll('.program-slide')
+  const programPrev = document.querySelector('.program-slider__prev')
+  const programNext = document.querySelector('.program-slider__next')
 
-programSlider.on('slideChange', function () {
-  if (programSlider.activeIndex == 0)
-    programPrev.classList.remove('clickable')
-  else
-    programPrev.classList.add('clickable')
+  programSlider.on('slideChange', function () {
+    if (programSlider.activeIndex == 0)
+      programPrev.classList.remove('clickable')
+    else
+      programPrev.classList.add('clickable')
 
-  if (programSlider.activeIndex == (programSlides.length - 1))
-    programNext.classList.remove('clickable')
-  else
-    programNext.classList.add('clickable')
-});
+    if (programSlider.activeIndex == (programSlides.length - 1))
+      programNext.classList.remove('clickable')
+    else
+      programNext.classList.add('clickable')
+  });
+}
 
 
 function setBoostSlider() {
