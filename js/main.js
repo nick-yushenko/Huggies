@@ -96,50 +96,73 @@ programSlider.on('slideChange', function () {
 });
 
 
-function setBoostSlider(){
+function setBoostSlider() {
+  // if (window.innerWidth <= 768)
+  //   const emptySlide = document.querySelectorAll('.boost-slide.empty')
+
   var boostSlider = new Swiper('.boost-slider', {
     // Optional parameters
     direction: 'horizontal',
     speed: 300,
-    spaceBetween: 30,
-    slidesPerView: 3,
-  
-    // Navigation arrows
+    slidesPerView: 'auto',
+    centeredSlides: true,
+
     navigation: {
       nextEl: '.boost-slider__next',
       prevEl: '.boost-slider__prev',
     },
-  
-  
+    breakpoints: {
+      // when window width is >= 320px
+      768: {
+        slidesPerView: 3,
+        freeMode: false,
+
+      },
+      425: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+
+      },
+
+
+    }
+
+
   })
+
+  if (window.innerWidth > 768 || window.innerWidth <= 425 )
+    boostSlider.slideTo(1)
+
+  const boostSlides = document.querySelectorAll('.boost-slide')
+  const boostPrev = document.querySelector('.boost-slider__prev')
+  const boostNext = document.querySelector('.boost-slider__next')
+
+  boostSlides.forEach(item => {
+    item.classList.remove('current')
+  })
+  boostSlides[boostSlider.activeIndex + 1].classList.add('current')
+
+  boostSlider.on('slideChange', function () {
+    if (boostSlider.activeIndex == 0)
+      boostPrev.classList.remove('clickable')
+    else
+      boostPrev.classList.add('clickable')
+
+    if (boostSlider.activeIndex == 3)
+      boostNext.classList.remove('clickable')
+    else
+      boostNext.classList.add('clickable')
+
+    boostSlides.forEach(item => {
+      item.classList.remove('current')
+    })
+    boostSlides[boostSlider.activeIndex + 1].classList.add('current')
+
+  });
+
+
+  boostSlides[boostSlider.activeIndex + 1];
 }
 
 if (window.innerWidth <= 1024)
   setBoostSlider()
-// чекбоксы для форм 
-
-// const checkboxes = document.querySelectorAll('.checkbox')
-
-// if (checkboxes)
-//   // checkboxes.forEach(item => {
-//   //   if (item.querySelector('input').getAttribute('name') == 'brif')
-//   //     console.log(item)
-//   // })
-//   checkboxes.forEach(item => {
-//     const input = item.querySelector('input')
-//     if (input.hasAttribute('checked'))
-//       item.classList.add('checked')
-//     else
-//       item.classList.remove('checked')
-
-//     input.onchange = function () {
-//       if (input.hasAttribute('checked'))
-//         item.classList.remove('checked')
-//       else
-//         item.classList.add('checked')
-
-//       if (item.querySelector('input').getAttribute('name') == 'brif' && )
-//       //     console.log(item)
-
-//     }
-//   })
