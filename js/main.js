@@ -172,3 +172,20 @@ function setBoostSlider() {
 
 if (window.innerWidth <= 1024)
   setBoostSlider()
+
+
+//anchors 
+
+const anchors = document.querySelectorAll('a[href*="#"]')
+console.log(anchors)
+anchors.forEach(function (item) {
+  item.addEventListener('click', function () {
+    let blockID = item.getAttribute('href').substring(1)
+    $("html, body").animate({
+      scrollTop: $('#' + blockID).offset().top + "px"
+    }, {
+      duration: 500,
+      easing: "swing"
+    });
+  })
+})

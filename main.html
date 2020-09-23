@@ -185,8 +185,8 @@
             </div>
 
             <div class="banner-mob__buttons">
-              <a href="#" class="btn">Обучающий марафон</a>
-              <a href="#" class="btn">Конкурс бизнес-идей</a>
+              <a href="#brif" class="btn">Обучающий марафон</a>
+              <a href="#competition" class="btn">Конкурс бизнес-идей</a>
             </div>
           </div>
         </div>
@@ -224,7 +224,7 @@
               <span>Всероссийский проект по&nbsp;поддержке&nbsp;инициативных&nbsp;мам</span>
             </div>
 
-            <a href="#" class="btn">Узнать больше</a>
+            <a href="#gift" class="btn">Узнать больше</a>
           </div>
 
 
@@ -262,7 +262,7 @@
         <div class="boost-wrap">
           <img src="img/boost/boost-bg.svg" alt="" class="boost-bg">
           <img src="img/boost/boost-bg-1.svg" alt="" class="boost-bg-1">
-          <div class="boost-slider__prev">
+          <div class="boost-slider__prev clickable">
             <img src="img/icons/arrow-icon.svg" alt="">
           </div>
 
@@ -270,7 +270,8 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide boost-slide empty">
               </div>
-              <div class="swiper-slide boost-slide">
+              <a href="index.html" class="swiper-slide boost-slide">
+                <div class="boost-slide__like">995 <img src="img/icons/like-icon.svg" alt=""></div>
                 <img src="img/boost/boost-1.png" alt="" class="boost-slide__img">
                 <div class="descr">
                   <span class="boost-slide__name">Книжка комиксов
@@ -278,36 +279,40 @@
                     для детей 1-5 лет</span>
                   <span class="boost-slide__author">Оля Евстигнеева</span>
                 </div>
-              </div>
-              <div class="swiper-slide boost-slide">
+              </a>
+              <a href="index.html"  class="swiper-slide boost-slide">
+                <div class="boost-slide__like">995 <img src="img/icons/like-icon.svg" alt=""></div>
+
                 <img src="img/boost/boost-2.png" alt="" class="boost-slide__img">
                 <div class="descr">
                   <span class="boost-slide__name">Поделки из&nbsp;дерева
                     и&nbsp;шерсти своими руками</span>
                   <span class="boost-slide__author">Диана Сергеева</span>
                 </div>
-              </div>
-              <div class="swiper-slide boost-slide">
+              </a>
+              <a href="index.html"  class="swiper-slide boost-slide">
+                <div class="boost-slide__like">995 <img src="img/icons/like-icon.svg" alt=""></div>
+
                 <img src="img/boost/boost-3.png" alt="" class="boost-slide__img">
                 <div class="descr">
                   <span class="boost-slide__name">Вязаная шапка с&nbsp;ушами животных и&nbsp;крыльями птиц
                   </span>
                   <span class="boost-slide__author">Диана Сергеева</span>
                 </div>
-              </div>
-              <div class="swiper-slide boost-slide">
+              </a>
+              <a href="index.html"  class="swiper-slide boost-slide">
+                <div class="boost-slide__like">995 <img src="img/icons/like-icon.svg" alt=""></div>
+
                 <img src="img/boost/boost-4.png" alt="" class="boost-slide__img">
                 <div class="descr">
                   <span class="boost-slide__name">Восковые экосвечи
                     с&nbsp;разными запахами</span>
                   <span class="boost-slide__author">Людмила Маликова</span>
                 </div>
-
-              </div>
+              </a>
               <div class="swiper-slide boost-slide boost-slide_primary toRegister ">
                 <img src="img/icons/add-icon.svg" alt="" class="boost-slide__add">
-                <a href="#" class="boost-slide__share">Рассказать
-                  о&nbsp;проекте</a>
+                <a href="#" class="boost-slide__share">Предложить идею</a>
               </div>
               <div class="swiper-slide boost-slide empty">
               </div>
@@ -331,7 +336,7 @@
       </div>
     </section>
 
-    <section class="gift">
+    <section class="gift" id="gift">
       <div class="wrap-fluid">
         <h2 class="gift-title">Подарки и&nbsp;гарантированные призы</h2>
         <div class="gift-wrap">
@@ -376,7 +381,7 @@
       </div>
     </section>
 
-    <section class="brif">
+    <section class="brif" >
       <img src="img/idea/idea-bg-5.svg" alt="" class="brif-bg">
       <div class="wrap-fluid">
         <div class="brif-descr">
@@ -435,7 +440,7 @@
       </div>
     </section>
 
-    <section class="program">
+    <section class="program" id="brif">
       <div class="wrap-fluid">
         <h2 class="program-title">Программа марафона</h2>
         <h2 class="program-title_mob">Обучающий марафон &laquo;Как&nbsp;начать&nbsp;зарабатывать
@@ -566,7 +571,7 @@
       </div>
     </section>
 
-    <section class="steps">
+    <section class="steps" id="competition" >
       <img src="img/steps/steps-bg.svg" alt="" class="steps-bg">
       <div class="wrap-fluid">
         <a href="#" class="steps-more toRules">Полные правила акции</a>
@@ -716,6 +721,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/jquery.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
