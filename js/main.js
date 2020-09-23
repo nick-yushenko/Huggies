@@ -12,10 +12,11 @@ const thanksModal = document.querySelector('#thanksModal')
 
 
 
+
 const closeModal = document.querySelectorAll('.modal-close')
 
 // Закрытие попапа "Спасибо"
-const closeThanks = thanksModal.querySelector('.close')
+const closeThanks = (thanksModal) ? thanksModal.querySelector('.close') : null
 
 if (closeModal)
   closeModal.forEach(item => {
@@ -154,7 +155,7 @@ function setBoostSlider() {
     else
       boostPrev.classList.add('clickable')
 
-    if (boostSlider.activeIndex == 3)
+    if (boostSlider.activeIndex == 4)
       boostNext.classList.remove('clickable')
     else
       boostNext.classList.add('clickable')
@@ -177,15 +178,45 @@ if (window.innerWidth <= 1024)
 //anchors 
 
 const anchors = document.querySelectorAll('a[href*="#"]')
-console.log(anchors)
 anchors.forEach(function (item) {
-  item.addEventListener('click', function () {
-    let blockID = item.getAttribute('href').substring(1)
-    $("html, body").animate({
-      scrollTop: $('#' + blockID).offset().top + "px"
-    }, {
-      duration: 500,
-      easing: "swing"
-    });
-  })
+  if (item.getAttribute('href').length != 1)
+    item.addEventListener('click', function () {
+      let blockID = item.getAttribute('href').substring(1)
+      $("html, body").animate({
+        scrollTop: $('#' + blockID).offset().top + "px"
+      }, {
+        duration: 500,
+        easing: "swing"
+      });
+    })
 })
+
+
+// Формы 
+
+const forms = document.querySelectorAll('form')
+
+if (forms)
+  forms.forEach(item => {
+    const checkboxes = item.querySelectorAll('input[type="checkbox"]')
+    let checkboxesCount = 2
+    checkboxes.forEach(btn => {
+      btn.addEventListener('click', function () {
+        if (btn.hasAttribute('checked')) {
+          btn.toggleAttribute('checked')
+          checkboxesCount--
+        } else {
+          btn.toggleAttribute('checked')
+          checkboxesCount++
+
+        }
+        if (checkboxesCount == 2)
+          item.classList.add('valide')
+        else
+          item.classList.remove('valide')
+
+      })
+    })
+
+
+  })
