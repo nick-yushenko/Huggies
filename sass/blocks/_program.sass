@@ -1,0 +1,655 @@
+.program 
+  padding-top: 90px
+  .wrap-fluid 
+    position: relative
+    .steps-more 
+      top: 20px
+  &-title 
+    font-size: 40px
+    font-family: 'Rotonda Bold'
+    font-weight: bold
+    margin-bottom: 25px
+    &_mob 
+      display: none
+  &-subtitle 
+    display: none
+  
+  &-wrap 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 100px
+
+  &-block 
+    &:first-child
+      .program-item:nth-child(1)
+        margin-left: 80px
+        margin-bottom: 80px
+        .program-item__bg 
+          width: 320px
+          left: -70px
+          transform: rotate(18deg)
+        .program-item__title 
+          width: 180px 
+
+      .program-item:nth-child(2)
+        margin-left: 30px
+        margin-bottom: 110px
+        .program-item__bg 
+          width: 340px
+          top: -60px
+          left: -50px
+          transform: rotate(8deg)
+      .program-item:nth-child(3)
+        margin-left: 80px
+        margin-bottom: 80px
+        .program-item__bg 
+          width: 380px
+          left: -60px
+          top: -70px
+          transform: rotate(-3deg)
+        .program-item__title 
+          width: 240px 
+    &:last-child
+      .program-item:first-child
+        // margin-left: 10px
+        margin-right: 0
+        margin-bottom: 140px
+        
+        .program-item__bg 
+          left: -80px
+          top: -60px
+          transform: rotate(-15deg)
+        .program-item__title 
+          width: 140px 
+
+      .program-item:last-child
+        // margin-right: 30px
+        .program-item__bg 
+          top: -60px
+          left: -60px
+  &-item 
+    margin-bottom: 140px
+    padding: 10px
+    position: relative
+    display: flex
+    flex-direction: column 
+    align-items: flex-start
+    width: max-content
+    &.left 
+      align-items: flex-end
+
+    &__title 
+      font-size: 18px
+      font-family: 'Rotonda Bold'
+      font-weight: bold
+      width: 210px
+      margin-bottom: 15px
+   
+    &__bg 
+      position: absolute
+      top: -45px 
+      left: -40px
+
+  &-card 
+    width: 250px
+    background-color: $primary
+    box-shadow: 0px 0px 18.4887px rgba(173, 149, 113, 0.24)
+    border-radius: 25px
+    padding-bottom: 20px
+    z-index: 3
+    &__img 
+      width: 100%
+      border-radius: 25px
+      margin-bottom: 20px
+    &__name 
+      color: #fff
+      font-size: 24px 
+      font-family: 'Rotonda Bold'
+      font-weight: bold
+      padding: 0 20px
+    &__role 
+      padding: 0 20px
+      color: #fff
+      display: block
+      margin-top: 3px
+      font-size: 18px
+      margin-bottom: 20px
+      font-family: 'Rotonda Regular'
+      font-weight: normal
+    &__descr 
+      padding: 0 20px
+      color: #fff
+      display: block
+      font-size: 14px
+      font-family: 'Rotonda Regular'
+      font-weight: normal
+
+    &__wrap 
+      margin-top: -30px
+
+      position: relative
+      width: max-content
+      height: max-content
+    &__bg 
+      position: absolute
+      top: -150px 
+      left: -220px
+      z-index: -1
+      
+      width: 650px
+    &__bg-1
+      position: absolute
+      top: -70px 
+      left: -100px
+      z-index: -1
+      width: 450px
+      // transform: rotate(25deg)
+
+  &-mobile 
+    display: none
+
+@media ( max-width: 1260px )
+  .program
+    &-title 
+      font-size: 36px
+    &-item 
+      &__title 
+        font-size: 16px
+     
+      // &__bg 
+      //   width: 280px
+      //   top: -60px
+      //   left: -60px 
+     
+    &-card 
+      &__bg 
+        // width: 550px
+        // top: -70px
+        left: -220px
+      &__bg-1
+        top: -70px
+        left: -140px
+
+
+    
+    &-block 
+      &:first-child
+        .program-item:nth-child(1)
+          margin-left: 100px
+          margin-bottom: 70px
+          .program-item__bg 
+            width: 290px
+            left: -50px
+            top: -40px
+          .program-item__title 
+            width: 160px 
+
+        .program-item:nth-child(2)
+          margin-left: 40px
+          margin-bottom: 100px
+          .program-item__bg 
+            width: 310px
+            top: -60px
+            left: -60px
+            transform: rotate(8deg)
+        .program-item:nth-child(3)
+          margin-left: 80px
+          margin-bottom: 80px
+          .program-item__bg 
+            width: 340px
+            left: -60px
+            top: -70px
+            transform: rotate(-3deg)
+          .program-item__title 
+            width: 240px 
+      &:last-child
+        .program-item:first-child
+          // margin-left: 10px
+          margin-right: 0
+          margin-bottom: 140px
+          
+          .program-item__bg 
+            left: -80px
+            top: -60px
+            transform: rotate(-15deg)
+          .program-item__title 
+            width: 120px 
+
+        .program-item:last-child
+          // margin-right: 30px
+          .program-item__bg 
+            top: -60px
+            left: -60px
+          .program-item__title 
+            width: 200px
+@media ( max-width: 1100px )
+  .program
+    &-title 
+      font-size: 32px
+    &-item 
+      margin-bottom: 100px
+      &__title 
+        font-size: 16px
+        margin-bottom: 10px
+      
+    &-card 
+      width: 210px
+      &__name 
+        font-size: 20px
+      &__role 
+        font-size: 14px
+      &__bg 
+        width: 550px
+        top: -120px
+        left: -190px
+      &__bg-1 
+        width: 400px
+        
+
+    
+    &-block 
+      &:first-child
+        .program-item:nth-child(1)
+          margin-left: 100px
+          margin-bottom: 70px
+          .program-item__bg 
+            width: 290px
+            left: -50px
+            top: -40px
+          .program-item__title 
+            width: 160px 
+
+        .program-item:nth-child(2)
+          margin-left: 40px
+          margin-bottom: 100px
+          .program-item__bg 
+            width: 310px
+            top: -60px
+            left: -60px
+            transform: rotate(8deg)
+        .program-item:nth-child(3)
+          margin-left: 80px
+          margin-bottom: 80px
+          .program-item__bg 
+            width: 340px
+            left: -60px
+            top: -70px
+            transform: rotate(-3deg)
+          .program-item__title 
+            width: 240px 
+      &:last-child
+        .program-item:first-child
+          // margin-left: 10px
+          margin-right: 0
+          margin-bottom: 110px
+          
+          .program-item__bg 
+            width: 260px
+            left: -60px
+            top: -50px
+            transform: rotate(-15deg)
+          .program-item__title 
+            width: 120px 
+
+        .program-item:last-child
+          // margin-left: -40px
+          .program-item__bg 
+            width: 250px
+            top: -50px
+            left: -50px
+  
+@media ( max-width: 1024px )
+  .program
+    .wrap-fluid 
+      .steps-more 
+        top: 12px
+    &-title 
+      font-size: 28px
+      margin-bottom: 5px
+    &-item 
+      width: 170px
+      margin-bottom: 90px
+      &__title 
+        width: 100%
+        font-size: 14px
+        margin-bottom: 10px
+    &-card 
+      width: 190px
+      padding-bottom: 15px
+      border-radius: 15px
+      &__img 
+        border-radius: 15px
+
+      &__name 
+        font-size: 18px
+        padding: 0 15px
+      &__role 
+        padding: 0 15px
+      &__descr 
+        padding: 0 15px
+
+      &__bg 
+        width: 400px
+        top: -30px
+        left: -110px
+      &__bg-1 
+        top: 10px
+        left: -50px
+        width: 300px
+        
+    &-block 
+      &:first-child
+        .program-item:nth-child(1)
+          margin-left: 40px
+          margin-bottom: 70px
+          .program-item__bg 
+            width: 270px
+            left: -50px
+            top: -40px
+          .program-item__title 
+            width: 140px 
+
+        .program-item:nth-child(2)
+          margin-left: 10px
+          margin-bottom: 70px
+          .program-item__bg 
+            width: 270px
+            top: -50px
+            left: -60px
+            transform: rotate(8deg)
+        .program-item:nth-child(3)
+          margin-left: 30px
+          margin-bottom: 80px
+          .program-item__bg 
+            width: 270px
+            left: -40px
+            top: -50px
+            transform: rotate(-3deg)
+          .program-item__title 
+            width: 210px 
+      &:last-child
+        .program-item:first-child
+          // margin-left: 10px
+          margin-left: -50px
+          margin-bottom: 90px
+          
+          .program-item__bg 
+            width: 260px
+            left: -60px
+            top: -60px
+            transform: rotate(-15deg)
+          .program-item__title 
+            width: 140px 
+
+        .program-item:last-child
+          // margin-left: -40px
+          margin-left: -40px
+          .program-item__bg 
+            width: 250px
+            top: -50px
+            left: -40px
+          .program-item__title 
+            width: 130px 
+
+
+@media ( max-width: 960px )
+  .program 
+
+    &-card 
+      &__wrap
+        margin-left: -40px
+
+@media ( max-width: 860px )
+  .program
+    &-title 
+      font-size: 24px
+    &-item 
+      width: 170px
+      margin-bottom: 70px
+      &__title 
+        width: 140px
+        font-size: 14px
+        margin-bottom: 7px
+      &__author 
+        font-size: 14px
+      &__role
+        font-size: 12px
+      &__bg 
+        width: 230px
+        top: -30px
+        left: -60px 
+
+    &-card
+      width: 150px
+      &__wrap
+        margin-left: -60px
+      &__img 
+        border-radius: 15px
+        margin-bottom: 10px
+
+      &__name 
+        font-size: 16px
+        padding: 0 10px
+      &__role 
+        font-size: 12px
+        padding: 0 10px
+        margin-bottom: 12px
+      &__descr 
+        font-size: 12px
+
+        padding: 0 10px
+
+      &__bg 
+        width: 430px
+        top: -50px
+        left: -150px
+      &__bg-1 
+        top: 10px
+        left: -50px
+        width: 260px
+        
+
+@media ( max-width: 768px )
+  .program
+    .wrap-fluid 
+      .steps-more 
+        display: none
+    &-title 
+      text-align: center
+    &-wrap 
+      margin-top: 50px
+@media ( max-width: 740px )
+  .program 
+    margin-top: 0px
+    margin-bottom: 30px
+    &-block 
+      display: none
+    &-wrap 
+      margin: 0
+    &-subtitle 
+      display: block
+      font-size: 14px
+      color: $primary
+      width: 300px
+      display: block
+      margin: 0 auto
+      margin-bottom: 40px
+      text-align: center
+    &-title 
+      display: none
+      text-align: center
+      margin-bottom: 40px
+      &_mob
+        display: block
+        font-size: 24px
+        text-align: center 
+        width: 300px
+        margin: auto
+        margin-bottom: 20px
+    &-card 
+      width: 360px
+      padding-bottom: 20px
+      &__wrap 
+        margin: 0 auto
+      &__name 
+        padding: 0 20px
+        font-size: 20px
+        margin-bottom: 5px
+      &__role 
+        padding: 0 20px
+        font-size: 14px
+      &__descr
+        font-size: 14px
+        padding: 0 20px
+      &__bg 
+        width: 1550px
+        top: -350px
+        left: -580px
+      &__bg-1 
+        width: 500px
+        left: -60px
+
+    &-mobile 
+      margin-top: 50px
+      display: block
+      &__title 
+        text-align: center
+      &__wrap 
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin: 40px 0
+      &__text 
+        text-align: center
+        font-size: 16px
+        margin-bottom: 20px
+      .btn 
+        margin: 0 auto
+        width: 200px
+    &-more 
+      color: $primary 
+      margin: 0 auto
+      display: block
+      width: max-content
+      margin-top: 10px
+      text-decoration: underline
+
+    
+    &-slider 
+      width: 80%
+      &__prev
+        width: 50px
+        height: 50px
+        display: flex
+        align-items: center
+        justify-content: center
+        transition: 0.3s
+        opacity: 0.3
+        &.clickable 
+          transition: 0.3s
+          opacity: 1
+      &__next 
+        width: 50px
+        height: 50px
+        display: flex
+        align-items: center
+        justify-content: center
+        transform: rotate(180deg)
+        opacity: 0.3
+        transition: 0.3s
+
+        &.clickable 
+          transition: 0.3s
+          opacity: 1
+
+    &-slide 
+      width: 500px
+      height: 110px
+      background-color: #fff
+      border-radius: 25px
+      padding: 20px 30px
+      display: flex
+      align-items: center
+      &__title 
+        font-size: 20px
+        font-family: 'Rotonda Bold'
+        font-weight: bold
+
+@media ( max-width: 500px )
+  .program 
+    &-slide 
+      &__title 
+        font-size: 18px
+
+@media ( max-width: 500px )
+  .program 
+    &-card 
+      margin: 0
+      width: 100%
+      &__wrap
+        width: 80%
+        margin: 0 auto !important
+      &__bg-1 
+        width: 430px
+        left: -50px
+        top: -30px
+    &-slider 
+      width: calc(100% - 60px)
+      &__next 
+        width: 30px
+        height: 30px
+        img 
+          width: 10px
+      &__prev
+        width: 30px
+        height: 30px
+        img 
+          width: 10px
+    &-slide 
+      height: 100px
+      padding: 15px
+      &__title 
+        font-size: 16px
+@media ( max-width: 425px )
+  .program 
+    &-more 
+      font-size: 14px
+    &-mobile 
+      &__wrap 
+        margin: 20px 0
+      &__text 
+        text-align: left
+        padding: 0 32px 
+        font-size: 14px
+    &-subtitle 
+      font-size: 14px
+      width: 90%
+      text-align: left
+      margin: 0
+      margin-bottom: 20px
+    &-title 
+      &_mob
+        text-align: left
+        font-size: 20px
+        width: 100%
+        margin-bottom: 10px
+    &-card 
+      margin: 0
+      width: 100%
+      &__wrap
+        width: 250px
+        margin: 0 auto !important
+      &__bg-1 
+        width: 330px
+        left: -40px
+        top: -20px
+      &__bg 
+        width: 1350px
+        top: -300px
+        left: -750px
+
+    &-mobile 
+      &__title 
+        text-align: left
+        font-size: 20px
